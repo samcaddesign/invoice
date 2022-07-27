@@ -1,0 +1,296 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* font-size: 16px; */
+    font-weight: 525;
+    width: 100%;
+    background:rgb(59, 173, 211);
+    font-family: 'Calibri', sans-serif;
+}
+button {
+    width: 80px;
+    height: 25px;
+    border: 0;
+    outline: none;
+    background: #3b3a9a;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 10px;
+    text-align: center;
+    margin-right: 5%;
+    cursor: pointer;
+
+}
+button:hover {
+    background: #0d0e0dd5;
+    /* color: black; */
+    border: 1px solid black;
+}
+.descrip-btn {
+    display: flex;
+}
+
+input {
+    border-radius: 5px;
+    cursor: text;
+}
+.class-p input {
+    cursor: pointer;
+}
+
+
+@media print {
+    .container-1 {
+        visibility: hidden;
+    }
+    .container-2 {
+        margin: 0;
+    }
+    body {
+        background: none;
+    }
+    .container-2 .page {
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+    }
+}
+.container-1 {
+    background:linear-gradient(rgb(128, 182, 240),rgb(151, 117, 160));
+    height: 88%;
+    max-width: 600px;
+    padding-left: 2%;
+    /* float: right; */
+    border-radius: 0 0 0 50px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+}
+.container-2 {
+    height: 30cm;
+    display: inline-block;
+    width: 21cm;    
+}
+
+.page {
+    background: white;
+    display: block;
+    overflow-y: hidden;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
+
+.page[size="A4"] {
+    width: 21cm;
+    height: 29.7cm;
+    overflow-x: hidden;
+}
+.container-2 .top-section,
+.container-2 .quoted,
+.container-2 .table-quotation,
+.container-2 .bottom-contents {
+    margin: 0 90px 0 90px;
+}
+
+
+.container-1 .table-quotation  {
+    overflow-x: auto;
+}
+.container-1 .table-quotation table {
+    width: 30%;
+}
+.container-1 .table-quotation td {
+    line-height: 40px;
+}
+
+
+
+/* container-2 top-section */
+.container-2 .top-section {
+    padding: 60px 0 20px 0;
+    height: 120px;
+}
+.container-2 .contact-content,
+.container-2 .logo {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.container-2 .contact-content span {
+    color:darkblue;
+}
+.container-2 .contact-content h2, p {
+    margin: 0;
+}
+.logo img {
+    height: 150px;
+    float: right;
+}
+
+/* container-2 quoted */
+.container-2 .quoted {
+    padding: 30px 20px 20px 0;
+    height: 130px;
+}
+.container-2 .quoted-1,
+.container-2 .quoted-2 {
+    font-size: 15px;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.container-2 .quoted h3 {
+    margin: 0;
+    color: darkblue;
+}
+.container-2 .quoted-date {
+    padding: 25px 0 0;
+}
+.container-2 .quoted-1 .quoted-date p {
+    padding: 5px 0;
+}
+
+/* container-2 table-quotation */
+.container-2 .table-quotation {
+    /* height: 380px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.descrip table tr, th, td {
+    border: 1px solid black;
+}
+.container-2 .descrip {
+    width: 100%;
+    margin-bottom: 10px;
+    /* height: 200px; */
+    /* background-color: aqua; */
+}
+.container-2 .descrip table{
+    width: 100%;
+    table-layout: fixed;
+    word-break: break-word;
+}
+.container-2 .descrip table tr td:first-child{
+    text-align: left;
+}
+.container-2 .descrip table tr{
+    text-align: right;
+}
+.descrip table tbody tr{
+    height: 20px;
+}
+.container-2 .tax {
+    width: 100%;
+    height: 100px;
+}
+.descrip table thead tr:first-child th:last-child {
+    width: 130px;
+}
+
+/*container-2 tax */
+.container-2 .descrip,
+.container-2 .tax,
+.container-2 .pt {
+    font-size: 14px;
+
+}
+
+/* container-2 tax-table */
+.container-2 .tax table {
+    float: right;
+    border-collapse: collapse;
+}
+#table-tax tbody tr td:first-child,
+#table-tax tbody tr td:last-child{
+    /* background-color: aqua; */
+    text-align: right;
+}
+#table-tax tbody tr td:nth-child(2) {
+    border: 1px solid black;
+    border-right: none;
+    /* background-color: brown; */
+    padding-left: 3px;
+    padding-right: 0;
+    text-align: left;
+}
+#table-tax tbody tr td:first-child{
+    padding-right: 8px;
+    border: none;
+}
+
+#table-tax tbody tr td:nth-child(3) {
+    border: 1px solid black;
+    border-left: none;
+    /* background-color: blue; */
+    width: 140px;
+}
+
+
+#in-words{
+    padding-top: 5px;
+    /* padding-left: 100px; */
+    text-align: right;
+}
+
+/* container-2 pt table */
+.container-2 .pt {
+    padding-top: 5px;
+    height: 50px;
+}
+.container-2 .pt table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-p  tr td {
+    border:1px solid black;
+}
+.container-2 .table-p tr td:first-child {
+    text-align: center;
+}
+.table-p tr:first-child td:nth-child(2) {
+    text-align: center;
+}
+.table-p tr:last-child td:first-child {
+    border: none;
+}
+.table-p tr:last-child td:nth-child(2) {  
+    border-right: none;
+    width: 10px;
+}
+.table-p tr:last-child td:nth-child(3) {  
+    border-left: none;
+    text-align: right;
+    width: 140px;
+}
+
+
+/* container-2 bottom-contents */
+.container-2 .bottom-contents {
+    padding: 0 0 20px;
+    height: 285px;
+    font-size: 12px;
+    line-height: 20px;
+    position: absolute;
+    bottom: 5%;
+}
+.bottom-contents .content-1 {
+    padding: 30px 0 0 ;
+}
+.bottom-contents .content-2 {
+    padding: 30px 0 20px ;
+}
+.bottom-contents .content-3 {
+    padding: 30px 0 20px ;
+}
+/* footer */
+.container-2 .footer {
+    /* float: right; */
+    margin: 0 20px 30px 0;
+    position: absolute;
+    left: 70%;
+    bottom: 0.5%;
+}

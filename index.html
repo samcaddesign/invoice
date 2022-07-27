@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style-invoice.css">
+    <script src="js/logic-invoice.js"></script>
+</head>
+<body>
+
+    <div class="container-2">
+        <div class="page" id="print-page" size="A4">
+            <div class="top-section">
+                <div class="contact-content">
+                    <h2 style="font-family:'Aldrich-regular' ;"><span id="sam"> SAM </span>CADDesign</h2> 
+                    <p>                    
+                        Vallalar Street, Newpet, <br>
+                        Krishnagiri, TN - 635 001. <br>
+                        <b>Mailid:</b> admin@samcaddesign.com <br>
+                        <b>Business Number:</b> +91-9488705066<br>
+                        <b>GSTIN:</b>33DPUP999G1Z8
+                    </p>
+                </div>
+                <div class="logo">
+                    <img src="./logo_new.png" alt="sam-logo">
+                </div>
+            </div>
+            
+            <div class="quoted">
+                <div class="quoted-1">
+                    <div class="quoted-no">
+                        <h3>Quoted No.</h3> <br>
+                        <p><b>#sm<span id="q-no"></span></b></p>                
+                    </div>
+                    <div class="quoted-date" style="font-size: 14px;">
+                        <p>DATE OF ISSUE: <span id="doi-1">date-issue</span></p>
+                        <p>DUE DATE: <span id="dd-1">date-due</span></p>
+                        
+                    </div>
+                </div>
+                <div class="quoted-2">
+                    <p>
+                        <h3>Quoted To</h3> 
+                    </p> <br>
+                    <div class="c1-details">
+                        <b><span id="c1-name">[Company name]</span> </b><br>
+                        
+                        <span id="c1-no">[Company address]</span> <br>
+                        <span id="c1-city"> </span> <br>
+                        <span id="c1-dist"> </span> <br>
+                        <span id="c1-st"> </span>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="table-quotation">
+                <div class="descrip">
+                    <table id="table-descrip"  style="border-collapse: collapse;">
+                        <thead>
+                            <tr>                            
+                                <th style="width: 280px;text-align: center;">Service Description</th>
+                                <th style="width: 80px;text-align: center;">Rate</th>
+                                <th style="width: 35px;text-align: center;">QTY</th>
+                                <th style="text-align: center;">Amount</th>
+                            </tr>   
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr style="background-color: lightgrey; height:10px;">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <div class="tax">
+                    <table id="table-tax">                    
+                        <tbody>
+                            <tr>
+                                <td>Subtotal</td>
+                                <td>&#8377;</td>
+                                <td><span  id="st">-&nbsp;&nbsp;&nbsp;</span></td>
+                            </tr>
+                            <tr>
+                                <td>Taxable value SGST @ 9%</td>
+                                <td>&#8377;</td>
+                                <td><span id="sgst">-&nbsp;&nbsp;&nbsp;</span></td>
+                            </tr>
+                            <tr>
+                                <td>Taxable value CGST @ 9%</td>
+                                <td>&#8377;</td>
+                                <td><span id="cgst">-&nbsp;&nbsp;&nbsp;</span></td>
+                            </tr>
+                            <tr>
+                                <td>Other costs</td>
+                                <td>&#8377;</td>
+                                <td><span id="otherc">-&nbsp;&nbsp;&nbsp;</span></td>
+                            </tr>
+                            <tr>
+                                <td>Total Cost (round-off)</td>
+                                <td>&#8377;</td>
+                                <td><span id="totalc">-&nbsp;&nbsp;&nbsp;</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="sts" id="in-words" style="font-size: 14px;">
+                    <p><b>In words, INR <span id="word-status">[rupees in words]</span></b></p>
+                </div>
+                <div class="pt">
+                    <table class="table-p" >
+                        <tr>
+                            <td colspan="3">Payment mode/ status</td>
+                            <td colspan="2"><span id="s-status"></span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td style="padding-left: 3px;">&#8377;</td>
+                            <td id="pt-status">-&nbsp;&nbsp;&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bottom-contents">
+                <div class="content-1">
+                    <p><b>Estimation Time for the project:</b> N/A</p>
+                </div>
+                <div class="content-2">
+                    <p>
+                        <b>**Note:</b> <br>
+                        Service will not include partial attachment works & maintainance charges. Development cost only. <br>
+                        50% payment should be paid, before commencement of the project & rest at time of delivery.* <br>
+                        The estimation time will be taken as consideration only after approval main received & initial payment done. <br>
+                        Kindly inform your aceeptance of the quote through Email.
+                    </p>
+                </div>
+                <div class="content-3">
+                    <p>
+                        **Regulation maintained <br>
+                        *Bank Details will be provided only when approval Email received
+                    </p>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Quotation | <span style="font-family:'Aldrich-regular' ;">SAM CADDesign</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="container-1" style="font-size: 15px;">
+        <h2>Invoice Details</h2>
+        <p>
+            Quoted No:
+            <input type="number" name="qn" id="qn" style="width: 60px;">
+        </p> <br>
+        <p>
+            Date of Issue:
+            <input type="date" name="doi" id="doi">
+        </p> <br>
+        <p>
+            Due Date:
+            <input type="date" name="dd" id="dd">
+        </p> <br>
+        <p>
+            Company name:
+            <input type="text" name="c-name" id="c-name" size="30">
+        </p> <br>
+        <p>
+            Company address: <br>
+
+            <input type="text" name="c-no" id="c-no" size="30" placeholder="street no, street name"> <br>
+            <input type="text" name="c-city" id="c-city" size="30" placeholder="city"> <br>
+            <input type="text" name="c-dist" id="c-dist" size="30" placeholder="dist"> <br>
+            <input type="text" name="c-st" id="c-st" size="30" placeholder="state-pincode">
+
+        </p> <br>
+        <button onclick="change()">Change</button>
+        <br>
+        <br>
+        <div class="table-quotation">
+            <table  style="border-collapse: collapse;">
+                <thead>
+                    <tr>        
+                        <th>Service Description</th>
+                        <th>Rate</th>
+                        <th>QTY</th>
+                        <!-- <th>Amount</th> -->
+                    </tr>   
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><textarea name="description" id="description" cols="30" rows="5"></textarea></td>
+                        <td><input type="number" name="rate" id="rate"></td>
+                        <td><input type="number" name="qty" id="qty"></td>
+                    </tr>   
+                </tbody>
+            </table>
+        </div> <br>
+
+        <div class="descrip-btn">
+            <button onclick="addRow(), subT(),convertNum()">Insert</button>
+            <button onclick="remRow()">Remove</button>
+        </div>
+        
+
+        <!-- <p class="class-p">Payment Status:
+            <input type="radio" name="status-p" id="p-status" value="Paid" onclick="pStatus1()">Paid
+            <input type="radio" name="status-p" id="up-status" value="Unpaid" onclick="pStatus2()">Unpaid
+        </p> -->
+        <br>
+
+        <button id="print-btn" onclick="printSheet()" style="cursor: progress;height: 28px;font-size: 16px;">Print</button>
+    </div>
+</body>
+</html>
