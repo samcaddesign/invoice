@@ -59,19 +59,19 @@ function addRow() {
     x++;
 }
 
-function remRow() {
+// function remRow() {
 
-    var table = document.getElementById('table-descrip');
-    console.log(table.rows.length);
-    var remove = table.rows.length;
+//     var table = document.getElementById('table-descrip');
+//     console.log(table.rows.length);
+//     var remove = table.rows.length;
     
-    if(table.rows.length > 3) {
-        table.deleteRow(remove - 3);
-    } 
-    else {
-        alert("reached default table size");
-    }
-}
+//     if(table.rows.length > 3) {
+//         table.deleteRow(remove - 3);
+//     } 
+//     else {
+//         alert("reached default table size");
+//     }
+// }
 
 var tc = 0;
 function subT() {
@@ -84,12 +84,18 @@ function subT() {
     var toBC = subTotal * 0.9;
     var b = document.getElementById("sgst").innerHTML = toBC.toFixed(2);
     var c = document.getElementById("cgst").innerHTML = b;
-    
+
     a = parseFloat(a);
     b = parseFloat(b);
     c = b;
-    var toABC = a + b + c;
-    tc = document.getElementById("totalc").innerHTML = Math.round(toABC);
+    var toABC = Math.round(a + b + c);
+
+    tc = toABC;
+    toABC = toABC.toFixed(2);
+    var totalC = 0;
+
+    totalC = document.getElementById("totalc").innerHTML = toABC;
+    document.getElementById('pt-status').innerHTML= totalC;
 }
 
 
