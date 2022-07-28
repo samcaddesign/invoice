@@ -70,6 +70,7 @@ function remRow() {
         x--;
     }
     subT();
+    convertNum();
     
     if(table.rows.length > 3) {
         table.deleteRow(remove - 3);
