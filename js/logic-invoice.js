@@ -59,19 +59,25 @@ function addRow() {
     x++;
 }
 
-// function remRow() {
+function remRow() {
 
-//     var table = document.getElementById('table-descrip');
-//     console.log(table.rows.length);
-//     var remove = table.rows.length;
+    var table = document.getElementById('table-descrip');
+    var remove = table.rows.length;
     
-//     if(table.rows.length > 3) {
-//         table.deleteRow(remove - 3);
-//     } 
-//     else {
-//         alert("reached default table size");
-//     }
-// }
+    list2.pop();
+    list3.pop();
+    if(x>0) {
+        x--;
+    }
+    subT();
+    
+    if(table.rows.length > 3) {
+        table.deleteRow(remove - 3);
+    } 
+    else {
+        alert("reached default table size");
+    }
+}
 
 var tc = 0;
 function subT() {
